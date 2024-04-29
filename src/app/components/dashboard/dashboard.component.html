@@ -1,0 +1,54 @@
+<div id="wrapper">
+
+
+    <!-- Topbar Start -->
+    <app-top-bar></app-top-bar>
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <app-side-bar></app-side-bar>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Home</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <!-- Child Component -->
+                <router-outlet></router-outlet>
+
+            </div>
+            <!-- end container-fluid -->
+
+        </div>
+        <!-- end content -->
+
+
+
+        <!-- Footer Start -->
+        <app-footer></app-footer>
+        <!-- end Footer -->
+
+    </div>
+    <!-- ============================================================== -->
+
+
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+</div>
