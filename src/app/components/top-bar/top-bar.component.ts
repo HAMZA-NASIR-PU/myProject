@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadScriptsDirective } from '../../directives/load-scripts.directive';
 
 @Component({
   selector: 'app-top-bar',
   standalone: true,
-  imports: [],
+  imports: [LoadScriptsDirective],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css'
 })

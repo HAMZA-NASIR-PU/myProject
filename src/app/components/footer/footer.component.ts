@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { LoadScriptsDirective } from '../../directives/load-scripts.directive';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [LoadScriptsDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

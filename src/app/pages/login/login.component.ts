@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
+import { LoadScriptsDirective } from '../../directives/load-scripts.directive';
 
 declare const toastr: any;  //template toastr
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, LoadScriptsDirective],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
     email: new FormControl("", [Validators.required, Validators.email]),
@@ -20,6 +21,9 @@ export class LoginComponent {
 
   constructor(private readonly router: Router, private _loginService: LoginService) {
     console.log("Login Page...");
+  }
+
+  ngOnInit(): void {
   }
 
   onSubmit(form: FormGroup) {
